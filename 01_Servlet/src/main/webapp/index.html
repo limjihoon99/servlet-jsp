@@ -21,22 +21,28 @@
 		<a href="first.do">View Details</a><br>
 		<a href="second.do">View Details</a>
 		
+		<h2>2. 서블릿 생명 주기</h2>
 		
+		<p>
+			객체가 생성 후 소멸되기까지의 과정을 라이프 사이클이라고 한다. <br>
+		</p>	
+			
+		<ol>
+			<li>첫 번째 요청일 경우, 객체를 생성하고 init() 메소드를 호출한다.</li>
+			<li>service() 메소드가 사용자의 요청에 따라 doGet(), doPost() 메소드를 호출한다.</li>
+			<li>서블릿이 서비스되지 않거나, 재컴파일 될 때 서블릿 객체가 destroy() 메소드를 호출 후 소멸한다.</li>
+		</ol>
 		
+		<a href="life.do">View Details</a>
 		
+		<h2>3. HTTP 요청 처리</h2>
 		
+		<p>
+			1) GET 방식은 URL에 데이터를 포함시켜 요청하는 것으로 보안 유지가 불가능하다.<br>
+			2) POST 방식은 데이터를 URL 노출하지 않고 요청하는 것으로 보안 유지가 가능하다.
+		</p>
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		<a href="views/userForm.html">View Details</a>		
 		
 	</body>
 </html>
