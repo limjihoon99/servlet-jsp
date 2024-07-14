@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0">
+  <filter>
+    <display-name>EnryptFilter</display-name>
+    <filter-name>EnryptFilter</filter-name>
+    <filter-class>com.beyond.mvc.common.filter.EnryptFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EnryptFilter</filter-name>
+    <url-pattern>/EnryptFilter</url-pattern>
+  </filter-mapping>
+  <display-name>04_MVC</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>logoutServlet</servlet-name>
+    <servlet-class>com.beyond.mvc.member.controller.MemberLogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>com.beyond.mvc.member.controller.MemberLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>enrollServlet</servlet-name>
+    <servlet-class>com.beyond.mvc.member.controller.MemberEnrollServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>logoutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>enrollServlet</servlet-name>
+    <url-pattern>/member/enroll</url-pattern>
+  </servlet-mapping>
+</web-app>
